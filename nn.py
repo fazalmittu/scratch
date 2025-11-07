@@ -123,6 +123,10 @@ if __name__ == "__main__":
 
 	X_train, y_train, X_test, y_test = load_mnist()
 
+	# reshape (60000, 28, 28) where it's (#num_samples, x, y)
+	# -> (60000, 784)
+	# then transpose -> (784, 60000)
+
 	X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1] ** 2)).T
 	X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1] ** 2)).T
 
@@ -134,7 +138,7 @@ if __name__ == "__main__":
 		y_train=y_train,
 		X_test=X_test,
 		y_test=y_test,
-		epochs=200,
+		epochs=500,
 		learning_rate=0.5,
 		verbose=True
 	)

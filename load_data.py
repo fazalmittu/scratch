@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
 	X_train, y_train, X_test, y_test = load_mnist()
 
-	y_train = one_hot_encode(y_train, 10)
+	y_train = one_hot_encode(y_train)
 
 	print(y_train[0])
 	print(y_train[0].shape)
