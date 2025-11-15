@@ -1,2 +1,2 @@
-# nn_scratch
-neural network with just numpy
+# scratch
+random ml / math
